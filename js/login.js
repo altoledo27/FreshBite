@@ -11,11 +11,11 @@ const loginForm = document.getElementById('login-form');
         const validUser = users.find(user => user.email === email && user.password === password);
 
         if (!validUser) {
-          return alert('Correo o contraseña incorrectos. Por favor, inténtalo de nuevo.');
+          return alert('Incorrect email or password. Please try again.');
         }
 
         localStorage.setItem('isLoggedIn', 'true');
         
-        alert('¡Inicio de sesión exitoso!');
+        alert('Login successful');
         window.location.href = 'index.html';
       });
