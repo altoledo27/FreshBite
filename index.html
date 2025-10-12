@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshBite</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__container">
+
+            <a href="#" class="header__logo">
+            <span class="logo__icon">🍊</span> FreshBite
+            </a>
+
+            <button id="myButton"></button>
+            <nav class="header__nav" id="animateme">
+                <ul class="menuLinks">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="recipe.html">Recipe</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="#">Profile</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <div class="container">
+                <h1>Find a Recipe</h1>
+                <form class="search-bar">
+                    <input type="text" placeholder="Search by ingredients or name...">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="main-content">
+            <div class="container">
+                <div class="quick-filters">
+                    <h2>Quick Filters</h2>
+                    <div class="filter-buttons">
+                        <button class="filter-btn">Vegan</button>
+                        <button class="filter-btn">Low Calorie</button>
+                        <button class="filter-btn">Quick Meals</button>
+                        <button class="filter-btn">Gluten-Free</button>
+                    </div>
+                </div>
+
+                <div class="recipe-grid">
+                    <h2>Featured Recipes</h2>
+                    <div class="grid-container">
+                        <div class="recipe-card">
+                            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NjA5NjV8MHwxfHNlYXJjaHwxfHxmb29kJTIwYm93bHxlbnwwfHx8fDE3Mjg1MjY3MDF8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Healthy Salad Bowl">
+                            <div class="card-content">
+                                <h3>Vibrant Quinoa Salad</h3>
+                                <p>A refreshing and healthy salad perfect for a light lunch.</p>
+                                <a href="#" class="btn-view">View Recipe</a>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NjA5NjV8MHwxfHNlYXJjaHw0fHxwaXp6YXxlbnwwfHx8fDE3Mjg1MjY3MDJ8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Homemade Pizza">
+                            <div class="card-content">
+                                <h3>Classic Margherita Pizza</h3>
+                                <p>Simple, delicious, and always a family favorite.</p>
+                                <a href="#" class="btn-view">View Recipe</a>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card">
+                            <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NjA5NjV8MHwxfHNlYXJjaHwyfHxwYW5jYWtlc3xlbnwwfHx8fDE3Mjg1MjY3MDJ8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Pancakes with Berries">
+                            <div class="card-content">
+                                <h3>Fluffy Berry Pancakes</h3>
+                                <p>Start your morning right with these fluffy pancakes.</p>
+                                <a href="#" class="btn-view">View Recipe</a>
+                            </div>
+                        </div>
+                         </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Recipe Explorer. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
