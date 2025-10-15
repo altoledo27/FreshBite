@@ -26,8 +26,9 @@
                 <ul class="menuLinks">
                     <li><a href="#" class="active">Home</a></li>
                     <li><a href="recipe.html">Recipe</a></li>
+                    <li><a href="favorites.html">Favorites</a></li>
+                    <li><a href="planner.html">Planner</a></li>
                     <li><a href="register.html">Register</a></li>
-                    <li><a href="#">Profile</a></li>
                 </ul>
             </nav>
         </div>
@@ -49,44 +50,29 @@
                 <div class="quick-filters">
                     <h2>Quick Filters</h2>
                     <div class="filter-buttons">
-                        <button class="filter-btn">Vegan</button>
-                        <button class="filter-btn">Low Calorie</button>
-                        <button class="filter-btn">Quick Meals</button>
-                        <button class="filter-btn">Gluten-Free</button>
+                        <button class="filter-btn" data-filter="diet" data-value="vegan">Vegan</button>
+                        <button class="filter-btn" data-filter="maxCalories" data-value="400">Low Calorie</button>
+                        <button class="filter-btn" data-filter="maxReadyTime" data-value="30">Quick Meals</button>
+                        <button class="filter-btn" data-filter="diet" data-value="gluten free">Gluten-Free</button>
+                        <button id="refresh-recipes-btn" class="filter-btn">
+                            Refresh 🔄
+                        </button>
                     </div>
                 </div>
-
                 <div class="recipe-grid">
-                    <h2>Featured Recipes</h2>
+                    <div class="grid-header">
+                        <h2>Featured Recipes</h2>
+                        
+                    </div>
+                    
+                    <div class="loader-container">
+                        <div class="spinner"></div>
+                    </div>
                     <div class="grid-container">
-                        <div class="recipe-card">
-                            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NjA5NjV8MHwxfHNlYXJjaHwxfHxmb29kJTIwYm93bHxlbnwwfHx8fDE3Mjg1MjY3MDF8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Healthy Salad Bowl">
-                            <div class="card-content">
-                                <h3>Vibrant Quinoa Salad</h3>
-                                <p>A refreshing and healthy salad perfect for a light lunch.</p>
-                                <a href="#" class="btn-view">View Recipe</a>
-                            </div>
                         </div>
-
-                        <div class="recipe-card">
-                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NjA5NjV8MHwxfHNlYXJjaHw0fHxwaXp6YXxlbnwwfHx8fDE3Mjg1MjY3MDJ8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Homemade Pizza">
-                            <div class="card-content">
-                                <h3>Classic Margherita Pizza</h3>
-                                <p>Simple, delicious, and always a family favorite.</p>
-                                <a href="#" class="btn-view">View Recipe</a>
-                            </div>
-                        </div>
-
-                        <div class="recipe-card">
-                            <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NjA5NjV8MHwxfHNlYXJjaHwyfHxwYW5jYWtlc3xlbnwwfHx8fDE3Mjg1MjY3MDJ8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Pancakes with Berries">
-                            <div class="card-content">
-                                <h3>Fluffy Berry Pancakes</h3>
-                                <p>Start your morning right with these fluffy pancakes.</p>
-                                <a href="#" class="btn-view">View Recipe</a>
-                            </div>
-                        </div>
-                         </div>
                 </div>
+
+                
             </div>
         </section>
     </main>
@@ -97,7 +83,6 @@
         </div>
     </footer>
     <script src="js/spoon-api.js"></script> 
-</body>
-
+    <script src="js/mockData.js"></script> <script src="js/spoon-api.js"></script>
 </body>
 </html>
