@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Mis Favoritos - FreshBite</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="js/favorite.js" defer></script>
+</head>
+<body>
+    <header class="header header--orange">
+        <div class="container header__container">
+
+            <a href="#" class="header__logo">
+            <span class="logo__icon">🍊</span> FreshBite
+            </a>
+
+            <button id="myButton"></button>
+            <nav class="header__nav" id="animateme">
+                <ul class="menuLinks">
+                    <li><a href="index.html" class=>Home</a></li>
+                    <li><a href="recipe.html">Recipe</a></li>
+                    <li><a href="favorites.html" class="active">Favorites</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="planner.html">Planner</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main-content">
+        <div class="container">
+            <div class="recipe-grid">
+                <h1>My Favorite Recipes ❤️</h1>
+                <div class="grid-container" id="favorites-grid">
+                    </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 FreshBite. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/mockData.js"></script> <script src="js/spoon-api.js"></script>
+</body>
+</html>

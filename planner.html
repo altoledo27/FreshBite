@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- ... (copia el head de tu index.html: metas, fuentes, CSS) ... -->
+    <title>Meal Planner - FreshBite</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+
+            <a href="#" class="header__logo">
+            <span class="logo__icon">🍊</span> FreshBite
+            </a>
+
+            <button id="myButton"></button>
+            <nav class="header__nav" id="animateme">
+                <ul class="menuLinks">
+                    <li><a href="index.html" class=>Home</a></li>
+                    <li><a href="recipe.html">Recipe</a></li>
+                    <li><a href="favorites.html">Favorites</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="planner.html" class="active">Planner</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="planner-header">
+                <h2>Meal Planner</h2>
+                <p>Arrastra tus recetas favoritas a los días de la semana para planificar tus comidas.</p>
+            </div>
+
+            <div class="planner-layout">
+                <!-- Columna Izquierda: Recetas para Arrastrar -->
+                <aside class="planner-sidebar">
+                    <h3>Mis Recetas Favoritas</h3>
+                    <div id="draggable-recipes" class="recipe-list">
+                        <!-- Las recetas favoritas se cargarán aquí -->
+                    </div>
+                </aside>
+
+                <!-- Columna Derecha: Calendario Semanal -->
+                <section class="planner-calendar">
+                    <div class="calendar-controls">
+                        <button id="prev-week-btn">◀ Semana Anterior</button>
+                        <h3 id="week-display">Esta Semana</h3>
+                        <button id="next-week-btn">Siguiente Semana ▶</button>
+                    </div>
+                    <div id="calendar-grid" class="calendar-grid">
+                        <!-- Los días de la semana se generarán aquí -->
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 FreshBite. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/planner.js"></script>
+    <script src="js/mockData.js"></script> <script src="js/spoon-api.js"></script>
+</body>
+</html>
