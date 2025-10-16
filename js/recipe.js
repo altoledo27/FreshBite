@@ -1,5 +1,5 @@
 
-const apiKey = 'ENTER AN API KEY';
+const apiKey = '7faa468959bc42db97213697c3a64e13';
 
 window.onload = async function() {
 
@@ -35,6 +35,7 @@ async function fetchRecipeDetails(id) {
         //Save the recipe on localStorage (to save points :C)
         localStorage.setItem(`recipe_${id}`, JSON.stringify(recipeData));
 
+
         displayRecipeDetails(recipeData);
 
     } catch (error) {
@@ -63,7 +64,7 @@ function displayRecipeDetails(recipe) {
     recipeDetailsList.innerHTML = `
         <li><strong>Prep time:</strong> ${recipe.readyInMinutes} minutes</li>
         <li><strong>Portions:</strong> ${recipe.servings}</li>
-        <li><strong>Cuisine:</strong> ${recipe.cuisines?.join(', ') || 'No especificado'}</li>
+        <li><strong>Cuisine:</strong> ${recipe.cuisines?.join(', ') || 'No specified'}</li>
     `;
 
     ingredientList.innerHTML = recipe.extendedIngredients.map(ingredient => 
