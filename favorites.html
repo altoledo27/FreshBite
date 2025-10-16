@@ -1,31 +1,44 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <title>Mis Favoritos - FreshBite</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name= "description" content= "Did you like a recipe? Save it on your favorites! YOu can see them on this page">
+    <meta name="author" content="Ana Laura Toledo">
+    <meta property="og:title" content="FreshBite">
+    <meta property="og:description" content="Did you like a recipe? Save it on your favorites! YOu can see them on this page">
+    <meta property="og:locale" content="en">
+    <meta property="og:image" content="https://altoledo27.github.io/FreshBite/img/logo.webp" />
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="FreshBite"> 
+    <meta property="og:url" content="https://freshbite-altoledo27.netlify.app/favorites">
+    <title>Favorites | FreshBite</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/favicon.ico">
     
     <link rel="stylesheet" href="styles/style.css">
+    <script src="js/auth.js"></script>
+    <script src="js/main.js" defer></script>
     <script src="js/favorite.js" defer></script>
 </head>
 <body>
     <header class="header header--orange">
         <div class="container header__container">
 
-            <a href="#" class="header__logo">
-            <span class="logo__icon">🍊</span> FreshBite
+            <a href="index.html" class="header__logo">
+                <img src="img/logo.webp" alt="FreshBite logo"> FreshBite
             </a>
 
             <button id="myButton"></button>
             <nav class="header__nav" id="animateme">
                 <ul class="menuLinks">
                     <li><a href="index.html" class=>Home</a></li>
-                    <li><a href="recipe.html">Recipe</a></li>
                     <li><a href="favorites.html" class="active">Favorites</a></li>
-                    <li><a href="register.html">Register</a></li>
                     <li><a href="planner.html">Planner</a></li>
+                    <li><a href="#" id="logout-btn">Logout</a></li>
                 </ul>
             </nav>
         </div>
@@ -40,10 +53,8 @@
         </div>
     </main>
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 FreshBite. All Rights Reserved.</p>
-        </div>
+        <p tabindex="0">@<span id="currentyear" tabindex="0"></span> FreshBite</p>
+        <p id="lastModified" tabindex="0"></p>
     </footer>
-    <script src="js/mockData.js"></script> <script src="js/spoon-api.js"></script>
 </body>
 </html>

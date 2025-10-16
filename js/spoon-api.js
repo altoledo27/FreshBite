@@ -1,5 +1,5 @@
 // API KEY
-//const apiKey = 'ENTER AN API KEY';
+const apiKey = '7faa468959bc42db97213697c3a64e13';
 
 const loaderContainer = document.querySelector('.loader-container'); 
 const searchForm = document.querySelector('.search-bar');
@@ -7,6 +7,7 @@ const searchInput = searchForm.querySelector('input');
 const resultsContainer = document.querySelector('.grid-container');
 const resultsTitle = document.querySelector('.recipe-grid h2');
 const filterButtons = document.querySelectorAll('.filter-btn');
+const refreshButton = document.getElementById('refresh-recipes-btn');
 
 
 searchForm.addEventListener('submit', function(event) {
@@ -38,6 +39,7 @@ async function searchRecipes(ingredients) {
         
         resultsContainer.innerHTML = ''; 
         showRecipes(recipes);
+        
 
     } catch (error) {
         console.error('Error searching for recipes:', error);
@@ -67,7 +69,7 @@ function showRecipes(recipes) {
 
         const isFavorite = favorites.some(fav => fav.id === recipe.id);
 
-        const cleanSummary = recipe.summary.replace(/<.*?>/g, ""); 
+        const cleanSummary = (recipe.summary || '').replace(/<.*?>/g, "");
         const shortSummary = cleanSummary.substring(0, 100);
 
         recipeCard.innerHTML = `
@@ -77,8 +79,7 @@ function showRecipes(recipes) {
                 <p class="recipe-summary">${shortSummary}...</p> 
             </div>
             <div class="card-actions">
-                <a href="#" class="btn-view" onclick="obtenerDetallesReceta(${recipe.id})">Ver Receta</a>
-                
+                <a href="#" class="btn-view" onclick="getRecipesDetails(${recipe.id})">See Recipe</a>
                 <button class="favorite-btn ${isFavorite ? 'active' : ''}" onclick="toggleFavorite(${recipe.id}, '${recipe.title}', '${recipe.image}')">
                     ❤️
                 </button>
@@ -125,6 +126,7 @@ async function searchFilteredRecipes(filter, value) {
         const data = await response.json();
 
         showRecipes(data.results); 
+        
 
     } catch (error) {
         console.error('Error on filters:', error);
@@ -148,7 +150,8 @@ async function fetchRandomRecipes() {
         const data = await response.json();
         
         resultsContainer.innerHTML = '';
-        showRecipes(data.recipes); 
+        showRecipes(data.recipes);
+        
         resultsTitle.textContent = 'Featured Recipes';
 
     } catch (error) {
